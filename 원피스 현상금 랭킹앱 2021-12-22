@@ -1,0 +1,40 @@
+//
+//  BountyViewController.swift
+//  BountyList
+//
+//  Created by 이창형 on 2021/12/22.
+//
+
+import UIKit
+
+class BountyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    
+    // UITableViewDataSource에서 물어보는거 답
+    // 테이블 뷰 셀 몇 개?
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    // 테이블 뷰 어떻게 보여줄까?
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        return cell
+    }
+    
+    // UITableViewDelegate
+    // 테이블 뷰 클릭하면 어째?
+    // indexPath는 인덱스 값
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("--> \(indexPath.row)")
+    }
+
+}
