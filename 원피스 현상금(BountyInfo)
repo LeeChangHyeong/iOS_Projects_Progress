@@ -1,0 +1,22 @@
+//
+//  BountyInfo.swift
+//  BountyList
+//
+//  Created by 이창형 on 2021/12/27.
+//  Copyright © 2021 com.joonwon. All rights reserved.
+//
+
+import UIKit
+
+struct BountyInfo {
+    let name: String
+    let bounty: Int
+    
+    var image: UIImage? {
+        return UIImage(named: "\(name).jpg")
+    }
+    init(name: String, bounty: Int) {
+        self.name = name
+        self.bounty = bounty
+    }
+}
